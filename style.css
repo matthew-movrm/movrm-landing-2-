@@ -73,15 +73,15 @@ header.hero > * {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem; /* tighter spacing to subtext */
-  white-space: nowrap;
   margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  white-space: nowrap;
 }
 
 .hero-subtext {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 1rem; /* same spacing below as above */
+  margin: 1.25rem auto;
   line-height: 1.6;
   font-style: italic;
 }
@@ -250,6 +250,7 @@ footer {
 
   .hero-subtext {
     font-size: 1.25rem;
+    margin: 1.25rem auto;
   }
 
   .how-heading {
@@ -276,11 +277,12 @@ footer {
     font-size: 2.4rem;
     white-space: nowrap;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .hero-subtext {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin: 1.25rem auto;
   }
 
   .footer-text {
