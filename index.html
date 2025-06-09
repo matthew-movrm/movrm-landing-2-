@@ -1,77 +1,252 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MOVRM – Where Motivation Meets Movement</title>
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+  --gap: 1.5rem;
+  --max-width: 90%;
+}
 
-  <!-- Navigation Bar -->
-  <nav class="navbar fade-in delay-1">
-    <img src="assets/logo.png" alt="MOVRM logo" class="logo-nav">
-    <a href="#join" class="nav-button">Join the Waitlist</a>
-  </nav>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #FF2D95;
+  color: #FFFFFF;
+  line-height: 1.6;
+  padding: 0;
+  overflow-x: hidden;
+}
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-background"></div>
+h1, h2, h3, .slogan {
+  font-family: 'League Spartan', sans-serif;
+  color: #FFFFFF;
+}
 
-    <h1 class="fade-in delay-2">For the New Runners</h1>
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: transparent;
+}
 
-    <p class="hero-subtext fade-in delay-3">
-      MOVRM helps new runners stay motivated by<br />
-      turning solo runs into group challenges—wherever you are.
-    </p>
+.logo-nav {
+  height: 40px;
+  width: auto;
+}
 
-    <a href="#join" class="cta-button fade-in delay-4">Join the Movement</a>
-  </header>
+.nav-button {
+  background-color: white;
+  color: #FF2D95;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
 
-  <!-- How It Works Section -->
-  <section class="how-it-works fade-in delay-5">
-    <h2>How It Works</h2>
-    <div class="how-steps">
-      <div class="step">
-        <div class="icon">👥</div>
-        <h3>Join a Group</h3>
-        <p>Pick a running group that matches your vibe.</p>
-      </div>
-      <div class="step">
-        <div class="icon">📨</div>
-        <h3>Get the Ping</h3>
-        <p>You’ll receive real-time run invites, like “5K at 7PM tonight.”</p>
-      </div>
-      <div class="step">
-        <div class="icon">✅</div>
-        <h3>Commit + Run</h3>
-        <p>Accept the challenge. Go for the run on your own time.</p>
-      </div>
-      <div class="step">
-        <div class="icon">💬</div>
-        <h3>Check In & Share</h3>
-        <p>Post-run, check in with your group, celebrate your win.</p>
-      </div>
-    </div>
-  </section>
+.nav-button:hover {
+  background-color: #fce2ee;
+}
 
-  <!-- Signup Section -->
-  <section id="join" class="signup fade-in delay-6">
-    <h2>Become a MOVRM Runner</h2>
-    <p class="signup-description">
-      Ready to run with us? Sign up now to join the waitlist and be part of the first wave of MOVRM runners.
-    </p>
-    <form action="https://formspree.io/f/{your-form-id}" method="POST">
-      <input type="text" name="name" placeholder="Your Full Name" required>
-      <input type="email" name="email" placeholder="Your Email Address" required>
-      <button type="submit">Join Now</button>
-    </form>
-  </section>
+/* HERO */
+header.hero {
+  text-align: center;
+  position: relative;
+  padding: 4rem 1.5rem 3rem;
+  overflow: hidden;
+}
 
-  <footer class="fade-in delay-7">
-    <p class="footer-text">© 2025 MOVRM – Mind Over Matter</p>
-  </footer>
+.hero-background {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
 
-</body>
-</html>
+header.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+header.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtext {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto var(--gap);
+  line-height: 1.6;
+}
+
+.cta-button {
+  background-color: white;
+  color: #FF2D95;
+  padding: 1rem 2.25rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  background-color: #fce2ee;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+  background-color: white;
+  color: #000;
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.how-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.step {
+  max-width: 200px;
+}
+
+.step .icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.step h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* SIGNUP */
+section.signup {
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.signup h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.signup-description {
+  margin-bottom: 1.5rem;
+}
+
+.signup form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0;
+}
+
+.signup input,
+.signup button {
+  padding: 0.75rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+}
+
+.signup input::placeholder {
+  color: #ffffffaa;
+}
+
+.signup button {
+  background-color: white;
+  color: #FF2D95;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  border: none;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.signup button:hover {
+  background-color: #fce2ee;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* FADE-IN */
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.2s; }
+.fade-in.delay-2 { animation-delay: 0.4s; }
+.fade-in.delay-3 { animation-delay: 0.6s; }
+.fade-in.delay-4 { animation-delay: 0.8s; }
+.fade-in.delay-5 { animation-delay: 1s; }
+.fade-in.delay-6 { animation-delay: 1.2s; }
+.fade-in.delay-7 { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .how-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+  }
+}
