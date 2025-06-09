@@ -51,7 +51,7 @@ h1, h2, h3, .slogan {
 header.hero {
   text-align: center;
   position: relative;
-  padding: 4rem 1.5rem 3rem;
+  padding: 3rem 1.5rem 2rem;
   overflow: hidden;
 }
 
@@ -70,17 +70,19 @@ header.hero > * {
   z-index: 1;
 }
 
-header.hero h1 {
-  font-size: 2.8rem;
+.hero-title {
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  white-space: nowrap;
 }
 
 .hero-subtext {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto var(--gap);
+  margin: 0 auto 1.2rem;
   line-height: 1.6;
+  font-style: italic;
 }
 
 .cta-button {
@@ -110,8 +112,10 @@ header.hero h1 {
   padding: 4rem 1.5rem 3rem;
 }
 
-.how-it-works h2 {
+.how-heading {
   font-size: 2rem;
+  color: #FF2D95;
+  font-weight: 700;
   margin-bottom: 2rem;
 }
 
@@ -128,12 +132,13 @@ header.hero h1 {
 
 .step .icon {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .step h3 {
   font-family: 'League Spartan', sans-serif;
   font-size: 1.1rem;
+  font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
@@ -150,9 +155,10 @@ section.signup {
   text-align: center;
 }
 
-.signup h2 {
+.signup-title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .signup-description {
@@ -232,18 +238,46 @@ footer {
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
-  header.hero h1 {
-    font-size: 2rem;
+@media screen and (min-width: 768px) {
+  .logo-nav {
+    height: 80px; /* Doubled size for desktop */
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.25rem;
+  }
+
+  .how-heading {
+    font-size: 2.5rem;
+  }
+
+  .signup-title {
+    font-size: 2.5rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .signup-title {
+    font-size: 1.5rem;
+    white-space: nowrap;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+    white-space: nowrap;
   }
 
   .hero-subtext {
     font-size: 1rem;
-  }
-
-  .how-steps {
-    flex-direction: column;
-    align-items: center;
   }
 
   .footer-text {
