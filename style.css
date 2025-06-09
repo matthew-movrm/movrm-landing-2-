@@ -55,6 +55,10 @@ header.hero {
   overflow: hidden;
 }
 
+.reduced-hero {
+  padding: 1.5rem 1rem;
+}
+
 .hero-background {
   position: absolute;
   top: -20%;
@@ -74,35 +78,21 @@ header.hero > * {
   font-size: 3rem;
   font-weight: 700;
   margin-top: 1rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
   white-space: nowrap;
 }
 
 .hero-subtext {
-  font-size: 1.2rem;
-  max-width: 600px;
-  margin: 1.25rem auto;
-  line-height: 1.6;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  line-height: 1.4;
   font-style: italic;
 }
 
-.cta-button {
-  background-color: white;
-  color: #FF2D95;
-  padding: 1rem 2.25rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  background-color: #fce2ee;
+.single-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* HOW IT WORKS */
@@ -133,14 +123,14 @@ header.hero > * {
 
 .step .icon {
   font-size: 2rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.step h3 {
-  font-family: 'League Spartan', sans-serif;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+.step strong {
+  display: block;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.25rem;
 }
 
 .step p {
@@ -249,8 +239,7 @@ footer {
   }
 
   .hero-subtext {
-    font-size: 1.25rem;
-    margin: 1.25rem auto;
+    font-size: 1.5rem;
   }
 
   .how-heading {
@@ -277,12 +266,11 @@ footer {
     font-size: 2.4rem;
     white-space: nowrap;
     margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero-subtext {
-    font-size: 1rem;
-    margin: 1.25rem auto;
+    font-size: 1.2rem;
   }
 
   .footer-text {
