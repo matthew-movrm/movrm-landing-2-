@@ -51,7 +51,7 @@ h1, h2, h3, .slogan {
 header.hero {
   text-align: center;
   position: relative;
-  padding: 2rem 1.5rem 2rem; /* Reduced padding to move content up */
+  padding: 2rem 1.5rem 2rem;
   overflow: hidden;
 }
 
@@ -73,15 +73,15 @@ header.hero > * {
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem; /* tighter spacing to subtext */
   white-space: nowrap;
-  margin-top: 1rem; /* Slight upward push */
+  margin-top: 1rem;
 }
 
 .hero-subtext {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 2rem; /* Increased space below text */
+  margin: 0 auto 1rem; /* same spacing below as above */
   line-height: 1.6;
   font-style: italic;
 }
@@ -280,7 +280,7 @@ footer {
 
   .hero-subtext {
     font-size: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .footer-text {
