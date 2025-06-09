@@ -91,8 +91,6 @@ header.hero > * {
   white-space: normal;
 }
 
-/* CTA button removed */
-
 /* HOW IT WORKS */
 .how-it-works {
   background-color: white;
@@ -138,6 +136,16 @@ header.hero > * {
 .step p {
   font-size: 0.95rem;
   color: #333;
+}
+
+/* ARROWS BETWEEN STEPS */
+.arrow {
+  font-size: 2rem;
+  color: #FF2D95;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 
 /* SIGNUP */
@@ -259,15 +267,21 @@ footer {
   .signup-title {
     font-size: 2.5rem;
   }
-
-  .footer-text {
-    /* You may complete this if needed */
-  }
 }
 
-/* Mobile-specific adjustment */
+/* Mobile Styles */
 @media screen and (max-width: 767px) {
   .hero-title {
     font-size: 2.2rem;
+  }
+
+  .how-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    transform: rotate(90deg); /* Turn horizontal arrow downwards */
+    margin: 0.5rem 0;
   }
 }
