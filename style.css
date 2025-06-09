@@ -51,7 +51,7 @@ h1, h2, h3, .slogan {
 header.hero {
   text-align: center;
   position: relative;
-  padding: 3rem 1.5rem 2rem;
+  padding: 2rem 1.5rem 2rem; /* Reduced padding to move content up */
   overflow: hidden;
 }
 
@@ -75,12 +75,13 @@ header.hero > * {
   font-weight: 700;
   margin-bottom: 1.2rem;
   white-space: nowrap;
+  margin-top: 1rem; /* Slight upward push */
 }
 
 .hero-subtext {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 1.2rem;
+  margin: 0 auto 2rem; /* Increased space below text */
   line-height: 1.6;
   font-style: italic;
 }
@@ -240,7 +241,7 @@ footer {
 /* Responsive */
 @media screen and (min-width: 768px) {
   .logo-nav {
-    height: 80px; /* Doubled size for desktop */
+    height: 80px;
   }
 
   .hero-title {
@@ -274,10 +275,12 @@ footer {
   .hero-title {
     font-size: 2.4rem;
     white-space: nowrap;
+    margin-top: 0.5rem;
   }
 
   .hero-subtext {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .footer-text {
