@@ -327,3 +327,23 @@ footer {
     display: inline-block;
   }
 }
+/* Existing CSS ... */
+
+/* NEW: Mobile adjustments for navbar layout */
+@media screen and (max-width: 767px) {
+  .index-nav {
+    justify-content: center;
+    position: relative;
+  }
+
+  .about-nav {
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .mobile-right {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+  }
+}
