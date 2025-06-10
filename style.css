@@ -349,3 +349,22 @@ footer {
     transform: translateY(-50%);
   }
 }
+.hero-bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 90vw;
+  max-width: 600px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  transform: translateY(15%) rotate(-5deg);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-bg-image {
+    width: 50vw;
+    max-width: 700px;
+    transform: translateY(5%) translateX(-10%) rotate(-5deg);
+  }
+}
