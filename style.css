@@ -21,10 +21,17 @@ h1, h2, h3, .slogan {
 /* NAVBAR */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   padding: 0.75rem 1rem;
   background: transparent;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .logo-nav {
@@ -32,31 +39,39 @@ h1, h2, h3, .slogan {
   width: auto;
 }
 
-.nav-button {
+.learn-more-button {
   background-color: white;
   color: #FF2D95;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: background-color 0.2s ease;
 }
 
-.nav-button:hover {
+.learn-more-button:hover {
   background-color: #fce2ee;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.mobile-only {
+  display: block;
 }
 
 /* HERO */
 header.hero {
   text-align: center;
   position: relative;
-  padding: 1.5rem 1rem 1rem;
+  padding: 1rem 1rem 0.5rem;
   overflow: hidden;
 }
 
 header.hero.reduced-hero {
-  padding: 1.5rem 1rem 0.5rem;
+  padding: 1rem 1rem 0.5rem;
 }
 
 .hero-background {
@@ -77,47 +92,32 @@ header.hero > * {
 .hero-title {
   font-size: 2.2rem;
   font-weight: 700;
-  margin: 0.5rem 0 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   white-space: normal;
 }
 
 .hero-subtext {
   font-size: 1rem;
-  margin: 0.5rem auto 0.75rem;
-  max-width: 700px;
+  max-width: 800px;
+  margin: 0 auto 0.5rem;
   line-height: 1.5;
   font-style: italic;
   white-space: normal;
 }
 
-.learn-more-button {
-  background-color: white;
-  color: #FF2D95;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
-  transition: background-color 0.2s ease;
-  display: inline-block;
-  margin-top: 0.75rem;
-}
-
-.learn-more-button:hover {
-  background-color: #fce2ee;
-}
-
 /* SIGNUP */
 section.signup {
-  padding: 1rem 1rem;
+  padding: 1rem 1rem 1.5rem;
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
 }
 
 .signup-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
+  white-space: normal;
 }
 
 .signup-description {
@@ -169,7 +169,7 @@ section.signup {
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem 2rem;
 }
 
 .footer-text {
@@ -182,7 +182,7 @@ footer {
   background-color: white;
   color: #000;
   text-align: center;
-  padding: 3rem 1rem 3rem;
+  padding: 4rem 1.5rem 3rem;
 }
 
 .how-heading {
@@ -197,7 +197,7 @@ footer {
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
   padding: 0 1rem;
 }
 
@@ -205,6 +205,7 @@ footer {
   max-width: 200px;
   text-align: center;
   flex: 1 1 150px;
+  margin: 0 auto;
 }
 
 .step .icon {
@@ -224,13 +225,14 @@ footer {
   color: #333;
 }
 
+/* ARROWS BETWEEN STEPS */
 .arrow {
   font-size: 2rem;
   color: #FF2D95;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 0 0 auto;
+  transform: rotate(90deg);
 }
 
 /* FADE-IN */
@@ -258,104 +260,7 @@ footer {
   }
 }
 
-/* RESPONSIVE */
-@media screen and (min-width: 768px) {
-  .logo-nav {
-    height: 80px;
-  }
-
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-subtext {
-    font-size: 1.2rem;
-    margin: 0.75rem auto;
-  }
-
-  .how-heading {
-    font-size: 2.5rem;
-  }
-
-  .signup-title {
-    font-size: 2.5rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-title {
-    font-size: 2rem;
-    margin: 0.25rem 0;
-  }
-
-  .hero-subtext {
-    font-size: 0.95rem;
-    margin: 0.5rem auto 0.5rem;
-  }
-
-  .how-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .arrow {
-    transform: rotate(90deg);
-    margin: 0.5rem 0;
-  }
-
-  .signup-title {
-    font-size: 1.75rem;
-  }
-
-  .navbar {
-    padding: 0.5rem 1rem;
-  }
-
-  .learn-more-button {
-    margin-top: 0.5rem;
-  }
-}
-/* Visibility Classes */
-.desktop-only {
-  display: none;
-}
-
-.mobile-only {
-  display: inline-block;
-}
-
-@media screen and (min-width: 768px) {
-  .desktop-only {
-    display: inline-block;
-  }
-
-  .mobile-only {
-    display: none;
-  }
-}
-/* Ensure logo container exists */
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
-/* Logo default position (mobile = center) */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 1.5rem;
-  background: transparent;
-}
-
-.logo-nav {
-  height: 40px;
-  width: auto;
-}
-
-/* Desktop adjustment */
+/* Responsive */
 @media screen and (min-width: 768px) {
   .navbar {
     justify-content: space-between;
@@ -368,5 +273,71 @@ footer {
 
   .logo-nav {
     height: 80px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subtext {
+    font-size: 1.25rem;
+    margin: 0 auto 0.75rem;
+    white-space: nowrap;
+  }
+
+  .signup-title {
+    font-size: 2.2rem;
+  }
+
+  .how-heading {
+    font-size: 2.5rem;
+  }
+
+  .how-steps {
+    flex-direction: row;
+  }
+
+  .arrow {
+    transform: rotate(0deg);
+    margin: 0;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .how-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
   }
 }
