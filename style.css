@@ -32,7 +32,8 @@ h1, h2, h3, .slogan {
   width: auto;
 }
 
-.nav-button {
+.nav-button,
+.learn-more-button {
   background-color: white;
   color: #FF2D95;
   padding: 0.5rem 1rem;
@@ -41,11 +42,16 @@ h1, h2, h3, .slogan {
   font-weight: bold;
   font-size: 0.95rem;
   transition: background-color 0.2s ease;
-  display: inline-block;
 }
 
-.nav-button:hover {
+.nav-button:hover,
+.learn-more-button:hover {
   background-color: #fce2ee;
+}
+
+/* Desktop-only visibility */
+.desktop-only {
+  display: none;
 }
 
 /* HERO */
@@ -57,6 +63,13 @@ header.hero {
 
 header.hero.reduced-hero {
   padding: 1rem 1rem 0.5rem;
+}
+
+header.hero.no-scroll-hero {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-background {
@@ -84,6 +97,10 @@ header.hero > * {
   font-size: 1rem;
   margin: 0 0 0.75rem;
   padding: 0 1rem;
+}
+
+.learn-more-mobile {
+  margin-bottom: 1rem;
 }
 
 /* SIGNUP */
@@ -253,12 +270,14 @@ footer {
 
 @media screen and (max-width: 767px) {
   .logo-nav {
-    height: 36px;
-    margin: 0 auto;
+    height: 54px; /* 1.5x original mobile size */
+    margin: 0;
   }
 
   .navbar {
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .hero-title {
