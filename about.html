@@ -3,49 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About MOVRM</title>
+  <title>MOVRM – Where Motivation Meets Movement</title>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar fade-in delay-1 about-nav">
+  <nav class="navbar fade-in delay-1">
     <img src="assets/logo.png" alt="MOVRM logo" class="logo-nav">
-    <a href="index.html" class="nav-button">Go Home</a>
+    <a href="about.html" class="nav-button nav-desktop-only">Learn More</a>
   </nav>
 
-  <!-- How It Works Section -->
-  <section class="how-it-works fade-in delay-2">
-    <h2 class="how-heading">How MOVRM Works</h2>
-    <div class="how-steps">
-      <div class="step">
-        <div class="icon">📅</div>
-        <strong>Pick a Run Date</strong>
-        <p>Choose a day that works for you.</p>
-      </div>
-      <div class="arrow">➔</div>
-      <div class="step">
-        <div class="icon">🗺️</div>
-        <strong>Set Your Route</strong>
-        <p>Run anywhere—around the block or through the park.</p>
-      </div>
-      <div class="arrow">➔</div>
-      <div class="step">
-        <div class="icon">🤝</div>
-        <strong>Join Others</strong>
-        <p>You’ll be matched with others running at the same time.</p>
-      </div>
-      <div class="arrow">➔</div>
-      <div class="step">
-        <div class="icon">💬</div>
-        <strong>Stay Connected</strong>
-        <p>Check in before and after your run to keep each other motivated.</p>
-      </div>
+  <!-- Hero Section -->
+  <header class="hero reduced-hero no-scroll-hero">
+    <div class="hero-background"></div>
+    <h1 class="hero-title fade-in delay-2">For the New Runners</h1>
+    <p class="hero-subtext fade-in delay-3">
+      At MOVRM, we help new runners stay motivated by turning solo runs into a shared experience.
+    </p>
+
+    <!-- Learn More Button for Mobile -->
+    <div class="learn-more-mobile">
+      <a href="about.html" class="nav-button">Learn More</a>
     </div>
+  </header>
+
+  <!-- Signup Section -->
+  <section id="join" class="signup fade-in delay-4">
+    <h2 class="signup-title">Become a MOVRM Runner</h2>
+    <p class="signup-description">
+      Ready to run with us? Sign up now to join the waitlist and be part of the first wave of MOVRM runners.
+    </p>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <button type="submit" class="signup-button">Sign Up</button>
+    </form>
   </section>
 
-  <footer class="fade-in delay-3">
+  <footer class="fade-in delay-5">
     <p class="footer-text">© 2025 MOVRM – Mind Over Matter</p>
   </footer>
 
