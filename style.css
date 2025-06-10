@@ -338,12 +338,14 @@ footer {
 
   .about-nav {
     justify-content: flex-start;
+    align-items: center; /* Align logo and button vertically */
     position: relative;
   }
 
   .mobile-right {
     position: absolute;
     right: 1rem;
-    top: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
