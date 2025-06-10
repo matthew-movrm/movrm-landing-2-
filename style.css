@@ -10,8 +10,10 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
   padding: 0;
-  overflow: hidden; /* Prevent scroll */
-  height: 100vh; /* Force full viewport */
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3, .slogan {
@@ -58,11 +60,11 @@ h1, h2, h3, .slogan {
 header.hero {
   text-align: center;
   position: relative;
-  padding: 0;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100vh - 70px); /* Viewport height minus navbar */
+  padding: 0;
 }
 
 .hero-background {
@@ -82,20 +84,24 @@ header.hero > * {
 
 /* SIGNUP */
 section.signup {
-  padding: 0 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
   text-align: center;
+  padding: 1rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .signup-title {
   font-size: 2.2rem;
-  margin-bottom: 0.3rem;
+  margin: 0.2rem 0 0.5rem;
 }
 
 .signup-description {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .signup form {
@@ -107,14 +113,14 @@ section.signup {
 
 .signup input,
 .signup button {
-  padding: 0.8rem;
+  padding: 0.75rem;
   border: 1px solid white;
   border-radius: 4px;
-  font-size: 1.05rem;
+  font-size: 1rem;
   background-color: transparent;
   color: white;
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
 }
 
 .signup input::placeholder {
@@ -125,7 +131,7 @@ section.signup {
   background-color: white;
   color: #FF2D95;
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   padding: 0.8rem 1.5rem;
@@ -135,13 +141,15 @@ section.signup {
   background-color: #fce2ee;
 }
 
+.learn-more-mobile {
+  margin-top: 1rem;
+  display: inline-block;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 0.5rem;
-}
-
-.footer-text {
+  padding: 0.5rem 1rem;
   font-size: 0.85rem;
 }
 
@@ -173,12 +181,12 @@ footer {
   }
 
   .signup-description {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .signup input,
   .signup-button {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .desktop-only {
@@ -202,6 +210,7 @@ footer {
 
   .index-nav {
     justify-content: center;
+    position: relative;
   }
 
   .signup-title {
@@ -209,12 +218,16 @@ footer {
   }
 
   .signup-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .signup input,
   .signup-button {
     font-size: 1rem;
+  }
+
+  .learn-more-mobile {
+    font-size: 0.95rem;
   }
 
   .desktop-only {
@@ -223,20 +236,5 @@ footer {
 
   .mobile-only {
     display: inline-block;
-  }
-}
-
-/* Adjust Learn More on mobile */
-@media screen and (max-width: 767px) {
-  .index-nav {
-    justify-content: center;
-    position: relative;
-  }
-
-  .mobile-right {
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
   }
 }
