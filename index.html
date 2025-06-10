@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome</title>
+  <title>MOVRM - Stay Motivated</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar index-nav">
-    <img src="your-logo.png" alt="Logo" class="logo-nav" />
+  <nav class="navbar">
+    <img src="assets/logo.png" alt="MOVRM Logo" class="logo-nav" />
     <a href="about.html" class="nav-button desktop-only">Learn More</a>
   </nav>
 
-  <header class="hero">
+  <header class="hero reduced-hero">
     <div class="hero-background"></div>
-    <h1 class="hero-title fade-in delay-1">Your Catchy Headline</h1>
-    <p class="hero-subtext fade-in delay-2">A quick, punchy description of your product or service.</p>
-    <a href="about.html" class="nav-button mobile-only learn-more-mobile fade-in delay-3">Learn More</a>
+    <h1 class="hero-title fade-in delay-1">Become a MOVRM Runner</h1>
+    <p class="hero-subtext fade-in delay-2">At MOVRM, we help new runners stay motivated by turning solo runs into a shared experience.</p>
+    <a href="about.html" class="nav-button mobile-only fade-in delay-3">Learn More</a>
   </header>
 
   <section class="signup fade-in delay-4">
-    <h2 class="signup-title">Join Us Now</h2>
-    <p class="signup-description">Sign up to be the first to know about updates.</p>
+    <h2 class="signup-title">For the New Runners</h2>
+    <p class="signup-description">Get notified when MOVRM launches. Be the first to join the movement.</p>
     <form>
-      <input type="email" placeholder="Your email address" required />
-      <button class="signup-button">Sign Up</button>
+      <input type="text" placeholder="Your Full Name" required />
+      <input type="email" placeholder="Your Email Address" required />
+      <button type="submit" class="signup-button">Notify Me</button>
     </form>
   </section>
+
+  <footer>
+    <p class="footer-text">&copy; 2025 MOVRM. All rights reserved.</p>
+  </footer>
 </body>
 </html>
