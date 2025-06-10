@@ -333,3 +333,40 @@ footer {
     display: none;
   }
 }
+/* Ensure logo container exists */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+/* Logo default position (mobile = center) */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  background: transparent;
+}
+
+.logo-nav {
+  height: 40px;
+  width: auto;
+}
+
+/* Desktop adjustment */
+@media screen and (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    justify-content: flex-start;
+    flex: 0 0 auto;
+  }
+
+  .logo-nav {
+    height: 80px;
+  }
+}
