@@ -270,12 +270,20 @@ footer {
 
 @media screen and (max-width: 767px) {
   .logo-nav {
-    height: 54px; /* 1.5x original mobile size */
-    margin: 0;
+    height: 54px; /* 1.5x original size */
+    margin: 0 auto;
+  }
+
+  /* Only center logo on index page via class */
+  .index-nav {
+    justify-content: center;
+  }
+
+  .about-nav {
+    justify-content: flex-start;
   }
 
   .navbar {
-    justify-content: space-between;
     padding-left: 1rem;
     padding-right: 1rem;
   }
